@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <!--   <link rel="stylesheet" href="/styles/lavish-bootstrap.css">-->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-image-gallery.min.css">
+    <!-- Optional theme -->
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/index.html">Home</a>
+                        <a class="navbar-brand" href="/Science.html">Research</a>
+
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li><a href="/About.html">About</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                
+        </div>
+    </header>
+
+    <div class="container">
+        <br>
+        <!-- The container for the list of example images -->
+        <div id="links">
+            <div id="links">
+                <a href="/images/micro/eversion.png" title="Eversion" data-gallery>
+                    <img height=200 width=200 src="/images/micro/eversion.png" alt="Eversion">
+                </a>
+                <a href="/images/micro/expansion.gif" title="Expansion" data-gallery>
+                    <img height=200 width=200 src="/images/micro/expansion.gif" alt="Expansion">
+                </a>
+
+                <a href="/images/micro/head4.jpg" title="Head and wings" data-gallery>
+                    <img height=200 width=200 src="/images/micro/head4.jpg" alt="Head">
+                </a>
+                <a href="/images/micro/wingref.jpg" title="Wing" data-gallery>
+                    <img height=200 width=200 src="/images/micro/wingref.jpg" alt="Wing">
+                </a>
+                <a href="/images/micro/time_contact.gif" title="Motion" data-gallery>
+                    <img height=200 width=200 src="/images/micro/time_contact.gif" alt="Motion">
+                </a>
+                <a href="/images/micro/trachea.jpg" title="Trachea" data-gallery>
+                    <img height=200 width=200 src="/images/micro/trachea.jpg" alt="Trachea">
+                </a>
+                <a href="/images/micro/fat50mm.png" title="Fatbody" data-gallery>
+                    <img height=200 width=200 src="/images/micro/fat50mm.png" alt="Fatbody">
+                </a>
+                <a href="/images/micro/32mmeyedisc.png" title="Eye imaginal disc" data-gallery>
+                    <img height=200 width=200 src="/images/micro/32mmeyedisc.png" alt="Eye disc">
+                </a>
+                <a href="/images/micro/eyedisc.gif" title="Eye imaginal disc" data-gallery>
+                    <img height=200 width=200 src="/images/micro/eyedisc.gif" alt="Eye disc">
+                </a>
+                <a href="/images/micro/mitoch.png" title="Mitochondria in EM" data-gallery>
+                    <img height=200 width=200 src="/images/micro/mitoch.png" alt="Eye disc">
+                </a>
+                <a href="/images/micro/junctions.jpg" title="Adherens junction in EM" data-gallery>
+                    <img height=200 width=200 src="/images/micro/junctions.jpg" alt="Eye disc">
+                </a>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p>All text and images are subject to Copyright &copy; Amarendra Badugu 2016. </p>
+        </div>
+    </footer>
+
+
+
+    <!-- Latest compiled and minified JavaScript -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="/js/bootstrap-image-gallery.min.js"></script>
+
+
+</body>
+
+</html>
