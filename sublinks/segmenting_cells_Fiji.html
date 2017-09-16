@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <title>Small or Big data</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/lavish-bootstrap.css">
+    <!-- Optional theme -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+
+
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../Index.html">Home</a>
+                        <a class="navbar-brand" href="../Science.html">Research</a>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li><a href="../About.html">About</a></li>
+
+                        </ul>
+                    </div>
+            </nav>
+
+            </div>
+
+
+    </header>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 clearfix">
+
+
+                <p class="lead">Segmenting outlines of the cells is very easy to do in <a href="http://fiji.sc/">FIJI</a> without the need for fancy tools. Since everything is scriptable, it is very easy to run batch on hundreds/thousands of images if parameters are figured out in advance. The following is done on a Z stack of ECAD-GFP for a single time point.</p>
+            
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step1Ecad.gif" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 1: Open the stack in Fiji</p>
+
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step2max.jpg" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 2: Do a maximum intensity projection. Select and run command "Z project..." in command finder.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step3.PNG" width="25%" height="25%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 3.1: Run command "Median..." in command finder to run the median filter. Select a radius for the kernel. Alternative at this step can be using a Gaussian blur ("Gaussian Blur..." in command finder)</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step3.5_aftermedian.jpg" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 3.2: Result of median filter.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step4_findmaxima.PNG" width="100%" height="100%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 4: Find maxima. Select and run command "Find Maxima..." in command finder. Select options, "Segmented Particles", "Exclude edge maxima" to remove edge effects, "Light/Dark background" as needed. Check "Preview Point Selection" to find the points of maxima and adjust "Noise Tolerance" until each one of the cells only contains one point.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step5_segmented.jpg" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 5: Select the segmented outlines which is outputted.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step6_analyse.jpg" width="100%" height="100%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 6: Select and run command "Analyze Particles..." in command finder. Use size to filter out cells which are too small or too big. You can choose to display results now or later. Select "Add to manager" to add the elements to ROI manager and "exclude on edges" to remove edge effects which might have escaped the previous step. </p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step7_roimanager.PNG" width="100%" height="100%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 7.1: The ROI manager would have found the segmented outlines. Select the ROIS and then modify as per your needs. Add or delete ROIS accordingly.</p>
+                <o:p>&nbsp;</o:p>
+                </div>
+                <div class="col-md-8 col-md-offset-3 clearfix">
+                 <img src="../images/Photos/segment/step1_freehand.PNG" width="100%" height="100%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">To manually add ROIS, Step 1: select the freehand tool, selected option in the tool bar in the picture above.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step2_freehand.PNG" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">To manually add ROIS, Step2: Zoom in to the cell of interest, trace the cell, press t or use button Add on the ROI manager. Use a Wacom pen tablet or a Cintiq or any tablet with active stylus abilities to make life easier. </p>
+                <o:p>&nbsp;</o:p>
+                    </div>
+                  <div class="col-md-8 col-md-offset-2 clearfix">
+                <img src="../images/Photos/segment/step7setmeasure.PNG" width="50%" height="50%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 7.2: Run the "Set Measurements..." options in the command finder. Select your desired parameters.</p>
+                <o:p>&nbsp;</o:p>
+                <img src="../images/Photos/segment/step7_values_parameters.PNG" width="100%" height="100%" class="img-responsive" alt="">
+                <o:p>&nbsp;</o:p>
+                <p class="lead">Step 7.3: Select ROI manager, Press "Deselect" and then "Measure" in ROI manager to get Results window with the parameters of the cell outlines. Warning: If results already exist in the Results window, the new values will be appended. Delete all the values in the Results window before running a new Measure command.</p>
+                <o:p>&nbsp;</o:p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container text-center">
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p>All text and images are free to use. Amarendra Badugu 2016. </p>
+        </div>
+    </footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

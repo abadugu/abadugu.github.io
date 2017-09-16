@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <title>Genetics with Python</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/lavish-bootstrap.css">
+    <!-- Optional theme -->
+</head>
+
+<body>
+    <header>
+        <div class="container">
+
+
+
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="../Index.html">Home</a>
+                        <a class="navbar-brand" href="../Science.html">Research</a>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                        <ul class="nav navbar-nav">
+                            <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                            <li class="hidden">
+                                <a href="#page-top"></a>
+                            </li>
+                            <li><a href="../About.html">About</a></li>
+
+                        </ul>
+                    </div>
+            </nav>
+
+            </div>
+
+
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 clearfix">
+
+
+                <p>
+                    <o:p>&nbsp;</o:p>
+                    
+                </p>
+                <p align=center><span style='font-size:18.0pt'>Learning Genetics with Python<o:p></o:p></span></p>
+
+
+
+
+                <p class="lead">A cross is mating of two flies with different/same genotypes. A stock is group of flies. To get a desired genotype, one has to cross flies with a set of rules. I wrote a python script in my spare time to replicate the elements of a cross to generate a stable stock (preserving the genotype of the fly). Writing this script helped me understand the complexity behind a simplest cross. I found that fundamentals of genetics can be easy to learn with programming logic. &nbsp;
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p>
+                    <o:p>&nbsp;</o:p>
+                    
+                </p>
+                <p class="lead">Perspective:
+                    <o:p></o:p>
+                    
+                    </b>
+                </p>
+
+        <p class="lead">Drosophila is one of the coolest model organisms that can be studied in developmental biology. Fly genetics is considered to be extremely advanced with a history of hundred years,(<a li="http://www.columbia.edu/cu/alumni/Magazine/Legacies/Morgan/">Thomas Hunt morgan</a>. The two major tasks for any fly pusher (handler of the flies) are taking care of the stocks and learning to make crosses as well a complex array of other tasks which i wont go into detail. Both of these are extremely time-consuming and also error prone.
+                    <o:p></o:p>
+                </p>
+
+                <p>
+                    <o:p>&nbsp;</o:p>
+                    
+                </p>
+                <p class="lead">Background:
+                    <o:p></o:p>
+                    
+                    </b>
+                </p>
+
+
+                <p class="lead">Drosophila have 4 chromosomes. They are known in the order X/Y ; 2R/2L; 3R/3L; 4 for a male and X/X ; 2R/2L; 3R/3L; 4 for a female. Since 4th chromosome is too small, it is usually not targeted. The majority of the genetics done are targeting the first 3 chromosomes. The elegant simplicity of using Drosophila for genetics comes with chromosomes called balancers. These are chromosomes that underwent mutagenesis so much that they don’t recombine anymore (There is still <span class=SpellE><span class=GramE>a
+                    extremely tiny likelihood that this might happen though).There are several standard balancers available for a typical fly pusher for all the chromosomes. The existence of this chromosome in the fly is manifested with some kind of marker in the adult, larvae or pupae fly. This makes easier to select for individuals that are the correct genotype. Balancer chromosomes have many mutations that make the chromosome almost entirely nonfunctional. Having a balancer in the system allows us to only think of one chromosome at a time and not worry about recombining with the other one.<span style='mso-spacerun:yes'> 
+In the condition when two balancers come together on the same chromosome, the individual usually dies in the embryonic stage. Sometimes, it is possible to see small black necrotic embryos in the food, these could be because of the unfortunate situation of having two balancers. The tradeoff is the health of the flies as they tend to be much weaker with more number of balancers than a wild type fly.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Example: <span class=SpellE><span class=GramE>CyO is one such type of balancer on the second chromosome. It has a dominant marker that causes the adult wings to curl upwards depending upon the temperature. For an excellent reference, check <a href="http://www.sciencedirect.com/science/book/9780123846884">Atlas of drosophila morphology.</a>
+                    <o:p></o:p>
+                    
+                </p>
+
+
+                <p class="lead">Balancers are predominantly of two types. One is a weak balancer effect. Second is a strong balancer. The weak one is used typically used for its marker properties. Since it can just be a normal/partially functional chromosome or not so much mutated chromosome with a marker, the likelihood of recombination in case of pairing with a normal chromosome is much higher. Stronger balancers will preserve whatever is on the other chromosome and can usually considered as the gold standard for balancing.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p>
+                    <o:p>&nbsp;</o:p>
+                    
+                </p>
+                <p class="lead">A stable stock has one or more following characteristics. Some of these are easier to quantify than others.
+                    <o:p></o:p>
+                    
+                </p>
+
+
+                <p class="lead">Does not die because of bad health.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Chances of recombination between chromosome arms is negligible.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Can be homozygous on one or both arms.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Can have a strong balancer with the<span style='mso-spacerun:yes'>  other as a wild type chromosome or a chromosome of your preference on one or more than one chromosomes
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Can have a strong balancer with the<span style='mso-spacerun:yes'>  other as a marker chromosome on one or more than one chromosomes
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Can be propagated many times without threat of recombination
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Should not have the following:
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead"class="lead">Two different genotype chromosomes.
+                    <span style='mso-spacerun:yes'>  Causes higher chance of recombination
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">Genotype chromosome with a marker. Much lower chance, but still there is a likelihood of recombination depending upon the weak balancing effect.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">It is still possible to use a non-stable stock for your experiments. Just discard them after you finish doing the experiment. It is not wise to propagate such stocks as due to the threat of recombination. This means it is not always easy to say what is the genotype of the next generation? This can considered to be an unclean way of doing a cross. Recombination does not happen in males, so it is possible to imagine a scenario where you can use the males to pass the genes to a next generation without recombination. But that will of course will use too much energy.
+                    <o:p></o:p>
+                    
+                </p>
+                <p>
+                    <o:p>&nbsp;</o:p>
+                    
+                </p>
+                <p class="lead">Script:
+                    <o:p></o:p>
+                    
+                    </b>
+                </p>
+
+                <p class="lead">So far it is restricted to only the 2nd and 3rd chromosomes. It creates a score of how stable is a stock. Anything which can cause recombination to occur gets a lower score.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">The inputs of the script, make sure these files are just provided in the directory are
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">stocks.csv - contains a global list of the stock collection with their genotypes.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">markers.csv - Contains list of common markers but not balancer chromosomes. It is just a code for the marker.
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">balancers.csv - contains a list of balancers, it is just to tell the script the code for a particular balancer
+                    <o:p></o:p>
+                    
+                </p>
+
+                <p class="lead">crosses.csv - this is typically the only input file that you need to touch. The above three are kind of initialization values. Tell the software which genotype you would prefer if you cross a particular two genotypes. Alternatively. Just a target genotype should suffice. The software should be able to search for the transgenes, the balancers and give you a best possible parents to choose from. This is not implemented as of now.
+                    <o:p></o:p>
+                    
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2 clearfix">
+                <p>
+                    <o:p>&nbsp;</o:p>
+                </p>
+                <img src="../images/Photos/Photo_0034.jpg" width="75%" height="75%" class="img-responsive" alt="">
+                <p align=Left>Is n't genetics a modular algorithm?</p>
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+ <footer>
+        <div class="container text-center">
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p class="lead"></p>
+            <p>All text and images are subject to Copyright &copy; Amarendra Badugu 2016. </p>
+        </div>
+    </footer>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
