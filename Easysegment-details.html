@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Cell Segmentation</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Amarendra Badugu</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://twitter.com/AmarBadugu" class="twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.linkedin.com/in/amarendrabadugu/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="productivity-main.html#Gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
+          <li><a href="productivity-main.html#Publications"><i class="bx bx-book-content"></i> Publications</a></li>
+          <li><a href="productivity-main.html#Projects"><i class="bx bx-book-content"></i> Projects</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Cell cortex segmentation</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Cell cortex segmentation</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="container">
+
+        <div class="portfolio-details-container">
+          <p class="lead">Segmenting outlines of the cells with Find maxima plugin <a href="http://fiji.sc/">FIJI</a>. Everything is scriptable, it is very easy to run batch on hundreds/thousands of images if parameters were known in advance. Following example is a Z stack of Ecad-GFP for a single time point.</p>
+
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step1Ecad.gif" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 1: Open the stack in Fiji</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step2max.jpg" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 2: Run a maximum intensity projection. Select and run command "Z project..." in command finder.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step3.PNG" width="25%" height="25%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 3.1: Run command "Median..." in command finder to run the median filter. Select a radius for the kernel. Alternative at this step can be using a Gaussian blur ("Gaussian Blur..." in command finder)</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step3.5_aftermedian.jpg" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 3.2: Result of median filter.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step4_findmaxima.PNG" width="100%" height="100%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 4: Select and run command "Find Maxima..." in command finder. Select options, "Segmented Particles", "Exclude edge maxima" to remove edge effects, "Light/Dark background" as needed. Check "Preview Point Selection" to find the points of maxima and adjust "Noise Tolerance" until each one of the cells only contains one point.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step5_segmented.jpg" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 5: Select the segmented outlines which is outputted.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step6_analyse.jpg" width="100%" height="100%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 6: Select and run command "Analyze Particles..." in command finder. Use size to filter out cells which are too small or too big. You can choose to display results now or later. Select "Add to manager" to add the elements to ROI manager and "exclude on edges" to remove edge elements. </p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step7_roimanager.PNG" width="100%" height="100%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 7.1: The ROI manager displays segmented outlines. Select the ROIS and then modify as per your needs. Add or delete ROIS accordingly.</p>
+          <o:p>&nbsp;</o:p>
+          </div>
+          <div class="col-md-8 col-md-offset-3 clearfix">
+           <img src="assets/img/portfolio/segment/step1_freehand.PNG" width="100%" height="100%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">To manually add ROIS, Step 1: select the freehand tool, selected option in the tool bar in the picture above.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step2_freehand.PNG" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">To manually add ROIS, Step2: Zoom in to the cell of interest, trace the cell, press t or use button Add on the ROI manager. Use a Wacom pen tablet or a Cintiq or any tablet with active stylus abilities for quality of life improvements. </p>
+          <o:p>&nbsp;</o:p>
+              </div>
+            <div class="col-md-8 col-md-offset-2 clearfix">
+          <img src="assets/img/portfolio/segment/step7setmeasure.PNG" width="50%" height="50%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 7.2: Run the "Set Measurements..." options in the command finder. Select needed measurements.</p>
+          <o:p>&nbsp;</o:p>
+          <img src="assets/img/portfolio/segment/step7_values_parameters.PNG" width="100%" height="100%" class="img-responsive" alt="">
+          <o:p>&nbsp;</o:p>
+          <p class="lead">Step 7.3: Select ROI manager, Press "Deselect" and then "Measure" in ROI manager to get Results window with the parameters of the cell outlines. Warning: If results already exist in the Results window, the new values will be appended. Delete all the values in the Results window before running a new Measure command.</p>
+          <o:p>&nbsp;</o:p>
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Amarendra Badugu</span></strong>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

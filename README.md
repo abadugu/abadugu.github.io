@@ -1,2 +1,0 @@
-# abadugu.github.io
-Website
