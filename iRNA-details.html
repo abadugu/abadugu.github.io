@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Modelling of Limb</title>
+  <title>Inverse folding of RNA</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -47,10 +47,8 @@
       <nav class="nav-menu">
         <ul>
           <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="productivity-main.html"><i class="bx bx-book-content"></i> Productivity</a></li>
-          <li><a href="productivity-main.html#Gallery"><i class="bx bx-book-content"></i> Gallery</a></li>
-          <li><a href="productivity-main.html#Projects"><i class="bx bx-book-content"></i> Projects</a></li>
+          <li><a href="#Abstract"><i class="bx bx-book-content"></i>Abstract</a></li>
+          <li><a href="#details"><i class="bx bx-book-content"></i>Project information</a></li>
         </ul>
       </nav><!-- .nav-menu -->
       <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
@@ -59,62 +57,59 @@
   </header><!-- End Header -->
 
   <main id="main">
-
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Modelling of Limb digits</h2>
+          <h2>Inverse folding of RNA</h2>
           <ol>
             <li><a href="productivity-main.html#Projects">Productivity</a></li>
-            <li>Modelling of Limb digits</li>
+            <li>Inverse folding of RNA</li>
           </ol>
         </div>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="portfolio-description">
-          <h2>Abstract</h2>
-          <p>
-            Turing models have been proposed to explain the emergence of digits during limb development. However, so far the molecular components that would give rise to Turing patterns are elusive. We have recently shown that a particular type of receptor-ligand interaction can give rise to Schnakenberg-type Turing patterns, which reproduce patterning during lung and kidney branching morphogenesis. Recent knockout experiments have identified Smad4 as a key protein in digit patterning. We show here that the BMP-receptor interaction meets the conditions for a Schnakenberg-type Turing pattern and that the resulting model reproduces available wildtype and mutant data on the expression patterns of BMP, its receptor and Fgfs in the apical ectodermal ridge (AER) when solved on a realistic 2D domain that we extracted from limb bud images of E11.5 mouse embryos. We propose that receptor-ligand-based mechanisms serve as a molecular basis for the emergence of Turing patterns in many developing tissues.
-          </p>
-            </div>
-        <div class="portfolio-details-container">
-
-          <div class="owl-carousel portfolio-details-carousel">
-            <img src="assets/img/portfolio/turing.PNG" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/Regulatorynw.PNG" width="50%" height="50%" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/Regulatorynw1.PNG" width="50%" height="50%" class="img-fluid" alt="">
-            <img src="assets/img/portfolio/Thepatterns.PNG" class="img-fluid" alt="">
-          </div>
-          <div class="portfolio-info">
-            <h3>Project information</h3>
-            <ul>
-              <li><strong>Category</strong>: Mathematical Modelling</li>
-              <li><strong>Location</strong>: ETH Zurich</li>
-              <li><strong>Project timeline</strong>: 2011-2012</li>
-              <li><strong>Publication</strong>: <a href="http://www.nature.com/srep/2012/121218/srep00991/full/srep00991.html">Link</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="portfolio-description">
-                  <h2>Figure legends and References</h2>
-            <p>Figure 1: An advanced version of turing patterning with mechanical and biochemical elements</p>
-            <p>Figure 2: Big picture of the Regulatory network in the limb</p>
-            <p>Figure 3: Simulated regulatory network in the limb</p>
-            <p>Figure 4: Results. Adapted from <a href="http://www.nada.kth.se/utbildning/grukth/exjobb/rapportlistor/2012/rapporter12/badugu_amarendra_12007.pdf"> Link</a></p>
-            <p>Reference Manuscript: <a href="http://www.nature.com/srep/2012/121218/srep00991/full/srep00991.html"> Link</a></p>
-            <p>Reference Masters Thesis: <a href="http://www.nada.kth.se/utbildning/grukth/exjobb/rapportlistor/2012/rapporter12/badugu_amarendra_12007.pdf"> Link</a></p>
-        </div>
-
+    <section id="Abstract" class="portfolio section-bg">
+          <div class="container">
+      <div class="section-title">
+    <h2>Abstract</h2>
       </div>
-    </section><!-- End Portfolio Details Section -->
+      <p>
+    RNA secondary structure prediction, or folding, is a classic problem in bioinformatics: given a sequence of nucleotides, the aim is to predict the base pairs formed in its three dimensional conformation. The inverse problem of designing a sequence folding into a particular target structure has only more recently received notable interest. With a growing appreciation and understanding of the functional and structural properties of RNA motifs, and a growing interest in utilising biomolecules in nano-scale designs, the interest in the inverse RNA folding problem is bound to increase. However, whereas the RNA folding problem from an algorithmic viewpoint has an elegant and efficient solution, the inverse RNA folding problem appears to be hard.
+    In this paper we present a genetic algorithm approach to solve the inverse folding problem. The main aims of the development was to address the hitherto mostly ignored extension of solving the inverse folding problem, the multi-target inverse folding problem, while simultaneously designing a method with superior performance when measured on the quality of designed sequences. The genetic algorithm has been implemented as a Python program called Frnakenstein. It was benchmarked against four existing methods and several data sets totalling 769 real and predicted single structure targets, and on 292 two structure targets. It performed as well as or better at finding sequences which folded in silico into the target structure than all existing methods, without the heavy bias towards CG base pairs that was observed for all other top performing methods. On the two structure targets it also performed well, generating a perfect design for about 80% of the targets.
+    Our method illustrates that successful designs for the inverse RNA folding problem does not necessarily have to rely on heavy biases in base pair and unpaired base distributions. The design problem seems to become more difficult on larger structures when the target structures are real structures, while no deterioration was observed for predicted structures. Design for two structure targets is considerably more difficult, but far from impossible, demonstrating the feasibility of automated design of artificial riboswitches.</p>
+    </div>
+    </section>
+
+    <section id="skills" class="skills section-bg">
+          <div class="container">
+        <div class="section-title">
+          <h2>Methods applied</h2>
+        </div>
+        <h3>Programming</h3>
+        <p>Python</p>
+        <h3>Algorithms</h3>
+        <p>Genetic algorithms</p>
+      </div>
+    </section>
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="details" class="portfolio-details">
+        <div class="container">
+          <div class="section-title">
+              <h2>Project information</h2>
+            </div>
+
+              <li><strong>Category</strong>: Programming genetic algorithm</li>
+              <li><strong>Location</strong>: Oxford University</li>
+              <li><strong>Project timeline</strong>: 2011</li>
+              <li><strong>Publication</strong>: <a href="https://doi.org/10.1186/1471-2105-13-260">Link</a></li>
+        </div>
+        </section><!-- End Portfolio Details Section -->
+
 
   </main><!-- End #main -->
 
